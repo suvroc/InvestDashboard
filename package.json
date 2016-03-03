@@ -1,0 +1,23 @@
+{
+  "name": "invest-dashboard",
+  "version": "0.1.0",
+  "description": "Application to show the summary of your investitions. Initially it will be adapted to polish market",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "tsc": "^1.20150623.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://suvroc@github.com/suvroc/InvestDashboard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suvroc/InvestDashboard/issues"
+  },
+  "homepage": "https://github.com/suvroc/InvestDashboard#readme"
+}
