@@ -9,4 +9,3 @@ var Startup = (function () {
     return Startup;
 }());
 Startup.main();
-//# sourceMappingURL=main.js.map
