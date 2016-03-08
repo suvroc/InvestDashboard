@@ -1,25 +1,28 @@
 {
-  "name": "invest-dashboard",
-  "version": "0.1.0",
-  "description": "Application to show the summary of your investitions. Initially it will be adapted to polish market",
-  "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-typescript": "^2.12.1",
-    "tsc": "^1.20150623.0"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://suvroc@github.com/suvroc/InvestDashboard.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/suvroc/InvestDashboard/issues"
-  },
-  "homepage": "https://github.com/suvroc/InvestDashboard#readme"
+    "name": "angular2-quickstart",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "concurrently \"npm run tsc:w\" \"npm run lite\" ",
+        "tsc": "tsc",
+        "tsc:w": "tsc -w",
+        "lite": "lite-server",
+        "typings": "typings",
+        "postinstall": "typings install"
+    },
+    "license": "ISC",
+    "dependencies": {
+        "angular2": "2.0.0-beta.8",
+        "systemjs": "0.19.22",
+        "es6-promise": "^3.0.2",
+        "es6-shim": "^0.33.3",
+        "reflect-metadata": "0.1.2",
+        "rxjs": "5.0.0-beta.2",
+        "zone.js": "0.5.15"
+    },
+    "devDependencies": {
+        "concurrently": "^2.0.0",
+        "lite-server": "^2.1.0",
+        "typescript": "^1.8.2",
+        "typings": "^0.6.8"
+    }
 }
