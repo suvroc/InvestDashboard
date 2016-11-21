@@ -1,17 +1,50 @@
 <ion-header>
+
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>
+      Invest Dashboard
+    </ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addTransaction()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
+
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <ion-list>
+  <ion-list-header>
+    Total
+    <div item-right>
+      1564,82 zł 
+      <ion-icon color="secondary" name="arrow-round-up"></ion-icon> 
+      8%
+    </div>
+  </ion-list-header>
+  <ion-item (click)="showDetails('Pionnier')">
+    Pionnier
+    <div item-right>543,22 zł 
+      <ion-icon color="danger" name="arrow-round-down"></ion-icon> 8%
+    </div>
+  </ion-item>
+  <ion-item (click)="showDetails('IKZE')">
+    IKZE
+    <div item-right>543,22 zł 
+      <ion-icon color="secondary" name="arrow-round-up"></ion-icon> 8%
+    </div>
+  </ion-item>
+  <ion-item (click)="showDetails('Uni Korona')">
+    Uni Korona
+    <div item-right>543,22 zł 
+      <ion-icon color="secondary" name="arrow-round-up"></ion-icon> 8%
+    </div>
+  </ion-item>
+</ion-list>
 </ion-content>

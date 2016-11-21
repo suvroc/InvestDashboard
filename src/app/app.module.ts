@@ -1,3 +1,7 @@
+import { TransactionListPage } from './../pages/transaction-list/transaction-list';
+import { FundChartComponent } from './../components/fund-chart/fund-chart';
+import { AddTransactionPage } from './../pages/add-transaction/add-transaction';
+import { FundDetailsPage } from './../pages/fund-details/fund-details';
 import { NgModule } from '@angular/core';
 import { IonicApp, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
@@ -12,7 +16,11 @@ import { TabsPage } from '../pages/tabs/tabs';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    FundDetailsPage,
+    AddTransactionPage,
+    FundChartComponent,
+    TransactionListPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -23,7 +31,11 @@ import { TabsPage } from '../pages/tabs/tabs';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    FundDetailsPage,
+    AddTransactionPage,
+    FundChartComponent,
+    TransactionListPage
   ],
   providers: []
 })
