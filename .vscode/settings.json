@@ -6,5 +6,6 @@
         "**/*.js": { "when": "$(basename).ts"},
         "**/*.js.map": true
     },
-    "editor.wrappingColumn": 0
+    "editor.wrappingColumn": 0,
+    "typescript.check.workspaceVersion": false
 }
