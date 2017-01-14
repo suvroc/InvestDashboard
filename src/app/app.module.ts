@@ -1,3 +1,4 @@
+import { TrackerExamDetailPage } from './../components/charts/tracker-details';
 import { TransactionListPage } from './../pages/transaction-list/transaction-list';
 import { FundChartComponent } from './../components/fund-chart/fund-chart';
 import { AddTransactionPage } from './../pages/add-transaction/add-transaction';
@@ -9,6 +10,8 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { ChartsModule } from 'ng2-charts/ng2-charts';
+import '../../node_modules/chart.js/dist/Chart.min.js';
 
 @NgModule({
   declarations: [
@@ -20,10 +23,12 @@ import { TabsPage } from '../pages/tabs/tabs';
     FundDetailsPage,
     AddTransactionPage,
     FundChartComponent,
-    TransactionListPage
+    TransactionListPage,
+    TrackerExamDetailPage
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    ChartsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -35,7 +40,8 @@ import { TabsPage } from '../pages/tabs/tabs';
     FundDetailsPage,
     AddTransactionPage,
     FundChartComponent,
-    TransactionListPage
+    TransactionListPage,
+    TrackerExamDetailPage
   ],
   providers: []
 })

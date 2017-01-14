@@ -1,7 +1,8 @@
 import { TransactionListPage } from './../transaction-list/transaction-list';
 import { AddTransactionPage } from './../add-transaction/add-transaction';
-import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { Component  } from '@angular/core';
+import { NavController, NavParams } from 'ionic-angular'; 
+declare var Chart;
 
 /*
   Generated class for the FundDetails page.
@@ -31,7 +32,6 @@ export class FundDetailsPage {
   public showTransactions = () => {
     this.navCtrl.push(TransactionListPage, { fundName: this.fundName });
   }
-
 }
 
 export class FundDetailsPageParams {
