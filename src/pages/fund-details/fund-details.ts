@@ -1,3 +1,4 @@
+import { FundData } from './../../models/fund-data';
 import { TransactionListPage } from './../transaction-list/transaction-list';
 import { AddTransactionPage } from './../add-transaction/add-transaction';
 import { Component  } from '@angular/core';
@@ -15,10 +16,10 @@ declare var Chart;
   templateUrl: 'fund-details.html'
 })
 export class FundDetailsPage {
-  public fundName: string;
+  public fundData: FundData;
 
   constructor(public navCtrl: NavController, public params: NavParams) {
-    this.fundName = params.get('fundName'); 
+    this.fundData = (params.data as FundDetailsPageParams).fundData;
   }
 
   ionViewDidLoad() {
@@ -26,14 +27,14 @@ export class FundDetailsPage {
   }
 
   public addTransaction = () => {
-    this.navCtrl.push(AddTransactionPage, { fundName: this.fundName });
+    this.navCtrl.push(AddTransactionPage, { fundData: this.fundData });
   }
 
   public showTransactions = () => {
-    this.navCtrl.push(TransactionListPage, { fundName: this.fundName });
+    this.navCtrl.push(TransactionListPage, { fundData: this.fundData });
   }
 }
 
 export class FundDetailsPageParams {
-  public fundName: string;
+  public fundData: FundData;
 }

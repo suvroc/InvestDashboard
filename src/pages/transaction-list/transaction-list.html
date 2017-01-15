@@ -18,13 +18,14 @@
     <ion-list-header>
       <div item-right>1800 zł</div>
     </ion-list-header>
-    <ion-item>
 
-        <ion-icon name="arrow-round-forward"></ion-icon>
-
-      <ion-note item-right>12/04/2016</ion-note>
-      
-      36 zł
+    {{fundData | json}}
+    <ion-item *ngFor="let transaction of fundData.transactions">
+      aa
+      <ion-icon name="arrow-round-forward" *ngIf="transaction.transactionAmount >= 0"></ion-icon>
+      <ion-icon name="arrow-round-back" *ngIf="transaction.transactionAmount < 0"></ion-icon>
+      <ion-note item-right>{{ transaction.date }}</ion-note>
+      {{ transaction.transactionAmount }} zł
       <h3 item-right>1000zł</h3>
     </ion-item>
     <ion-item>

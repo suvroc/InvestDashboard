@@ -1,3 +1,4 @@
+import { FundData } from './../../models/fund-data';
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
@@ -12,14 +13,18 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'transaction-list.html'
 })
 export class TransactionListPage {
-  public fundName: string;
+  public fundData: FundData;
 
   constructor(public navCtrl: NavController, public params: NavParams) {
-    this.fundName = params.get('fundName'); 
+    this.fundData = (params.data as TransactionListPageParams).fundData;
   }
 
   ionViewDidLoad() {
     console.log('Hello TransactionListPage Page');
   }
 
+}
+
+export class TransactionListPageParams {
+  public fundData: FundData;
 }

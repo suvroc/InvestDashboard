@@ -1,4 +1,3 @@
-import { TrackerExamDetailPage } from './../components/charts/tracker-details';
 import { TransactionListPage } from './../pages/transaction-list/transaction-list';
 import { FundChartComponent } from './../components/fund-chart/fund-chart';
 import { AddTransactionPage } from './../pages/add-transaction/add-transaction';
@@ -23,8 +22,7 @@ import '../../node_modules/chart.js/dist/Chart.min.js';
     FundDetailsPage,
     AddTransactionPage,
     FundChartComponent,
-    TransactionListPage,
-    TrackerExamDetailPage
+    TransactionListPage
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -40,8 +38,7 @@ import '../../node_modules/chart.js/dist/Chart.min.js';
     FundDetailsPage,
     AddTransactionPage,
     FundChartComponent,
-    TransactionListPage,
-    TrackerExamDetailPage
+    TransactionListPage
   ],
   providers: []
 })

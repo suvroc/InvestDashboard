@@ -1,3 +1,4 @@
+import { FundData } from './../../models/fund-data';
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
@@ -12,11 +13,11 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'add-transaction.html'
 })
 export class AddTransactionPage {
-  public fundName: string;
+  public fundData: FundData;
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.fundName = this.navParams.data.fundName;
+    this.fundData = (this.navParams.data as AddTransactionPageParams).fundData;
   }
 
   ionViewDidLoad() {
@@ -24,7 +25,11 @@ export class AddTransactionPage {
   }
 
   public isFundDefined = () => {
-    return !!this.fundName;
+    return !!this.fundData;
   }
 
+}
+
+export class AddTransactionPageParams {
+  public fundData: FundData;
 }

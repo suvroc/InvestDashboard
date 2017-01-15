@@ -28,22 +28,14 @@
       8%
     </div>
   </ion-list-header>
-  <ion-item (click)="showDetails('Pionnier')">
-    Pionnier
-    <div item-right>543,22 zł 
-      <ion-icon color="danger" name="arrow-round-down"></ion-icon> 8%
-    </div>
-  </ion-item>
-  <ion-item (click)="showDetails('IKZE')">
-    IKZE
-    <div item-right>543,22 zł 
-      <ion-icon color="secondary" name="arrow-round-up"></ion-icon> 8%
-    </div>
-  </ion-item>
-  <ion-item (click)="showDetails('Uni Korona')">
-    Uni Korona
-    <div item-right>543,22 zł 
-      <ion-icon color="secondary" name="arrow-round-up"></ion-icon> 8%
+  
+<ion-item (click)="showDetails(fund)" *ngFor="let fund of fundStatistics">
+    {{fund.fund.name}}
+    <div item-right>{{ fund.currentValue | number : '1.2-2' }} zł 
+      <ion-icon color="danger" name="arrow-round-down" *ngIf="fund.currentResult < 0"></ion-icon> 
+      <ion-icon color="secondary" name="arrow-round-up" *ngIf="fund.currentResult >= 0"></ion-icon>
+      
+      {{ fund.absCurrentResult*100 | number : '1.2-2' }} %
     </div>
   </ion-item>
 </ion-list>
